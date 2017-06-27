@@ -41,9 +41,9 @@ public class MainContoller {
 
     }
 
-    @RequestMapping(value = "/jsonTest.do")
+    @RequestMapping(value = "/jsonTest1.do")
     public @ResponseBody
-    Object jsonTest() { //가상의 배열및 리스트에 데이터 add
+    Object jsonTest1() { //가상의 배열및 리스트에 데이터 add
         Board board = new Board();
         board.setSeq(1);
         board.setTitle("제목");
@@ -60,10 +60,82 @@ public class MainContoller {
         filelist.add(boardFile);
         board.setFilelist(filelist);
 
-        logger.info("jsonTest.....");
+        logger.info("jsonTest1.....");
 
-        System.out.println("jsonTest");
-            return board;
+        System.out.println("jsonTest1");
+        return board;
+    }
+    @RequestMapping(value = "/jsonTest2.do")
+    public @ResponseBody
+    Object jsonTest2() { //가상의 배열및 리스트에 데이터 add
+        Board board = new Board();
+        board.setSeq(1);
+        board.setTitle("제목");
+        board.setContent("내요내용내용");
+        board.setRegdate(new Date());
+        ArrayList<BoardFile> filelist = new ArrayList<BoardFile>();
+        BoardFile boardFile = null; boardFile = new BoardFile();
+        boardFile.setFileSeq(1); boardFile.setFileName("파일명1");
+        boardFile.setFileSize(1000); filelist.add(boardFile);
+        boardFile = new BoardFile();
+        boardFile.setFileSeq(2);
+        boardFile.setFileName("파일명2");
+        boardFile.setFileSize(25645);
+        filelist.add(boardFile);
+        board.setFilelist(filelist);
+
+        logger.info("jsonTest2.....");
+
+        System.out.println("jsonTest2");
+        return board;
+    }
+    @RequestMapping(value = "/jsonTest3.do")
+    public @ResponseBody
+    Object jsonTest3() { //가상의 배열및 리스트에 데이터 add
+        Board board = new Board();
+        board.setSeq(1);
+        board.setTitle("제목");
+        board.setContent("내요내용내용");
+        board.setRegdate(new Date());
+        ArrayList<BoardFile> filelist = new ArrayList<BoardFile>();
+        BoardFile boardFile = null; boardFile = new BoardFile();
+        boardFile.setFileSeq(1); boardFile.setFileName("파일명1");
+        boardFile.setFileSize(1000); filelist.add(boardFile);
+        boardFile = new BoardFile();
+        boardFile.setFileSeq(2);
+        boardFile.setFileName("파일명2");
+        boardFile.setFileSize(25645);
+        filelist.add(boardFile);
+        board.setFilelist(filelist);
+
+        logger.info("jsonTest3.....");
+
+        System.out.println("jsonTest3");
+        return board;
+    }
+    @RequestMapping(value = "/jsonTest4.do")
+    public @ResponseBody
+    Object jsonTest4() { //가상의 배열및 리스트에 데이터 add
+        Board board = new Board();
+        board.setSeq(1);
+        board.setTitle("제목");
+        board.setContent("내요내용내용");
+        board.setRegdate(new Date());
+        ArrayList<BoardFile> filelist = new ArrayList<BoardFile>();
+        BoardFile boardFile = null; boardFile = new BoardFile();
+        boardFile.setFileSeq(1); boardFile.setFileName("파일명1");
+        boardFile.setFileSize(1000); filelist.add(boardFile);
+        boardFile = new BoardFile();
+        boardFile.setFileSeq(2);
+        boardFile.setFileName("파일명2");
+        boardFile.setFileSize(25645);
+        filelist.add(boardFile);
+        board.setFilelist(filelist);
+
+        logger.info("jsonTest4.....");
+
+        System.out.println("jsonTest4");
+        return board;
     }
 }
 
