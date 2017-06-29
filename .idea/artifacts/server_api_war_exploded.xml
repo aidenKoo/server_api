@@ -38,6 +38,17 @@
           <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.0.0-M2" />
           <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.0.0-M4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.9.RELEASE" />
+          <element id="library" level="project" name="Maven: sslext:sslext:1.2-0" />
+          <element id="library" level="project" name="Maven: struts:struts:1.2.7" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.7.0" />
+          <element id="library" level="project" name="Maven: commons-chain:commons-chain:1.0" />
+          <element id="library" level="project" name="Maven: commons-digester:commons-digester:1.6" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:2.1" />
+          <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.0.b2" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.0" />
+          <element id="library" level="project" name="Maven: commons-validator:commons-validator:1.1.4" />
+          <element id="library" level="project" name="Maven: oro:oro:2.0.8" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

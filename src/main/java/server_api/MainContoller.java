@@ -1,15 +1,20 @@
 package server_api;
 
 import org.apache.log4j.Logger;
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import java.awt.*;
+import java.io.IOException;
+import java.util.*;
 
 /*
  * Created by aiden on 2017-06-29.
@@ -43,6 +48,43 @@ public class MainContoller {
         return "index";
 
     }
+    /*-----------------------------------PARA TEST-----------------------------------------------*/
+    @RequestMapping(value = "/paraTest.do",method= RequestMethod.GET)
+    public @ResponseBody
+    SchoolParaTest paraTest (@RequestParam("empJson") String empJson, HttpServletRequest req) throws Exception {
+
+        try {
+            //SchoolParaTest[] emp = new ObjectMapper().readValue(empJson, SchoolParaTest[].class); // 배열로 받기
+            java.util.List<SchoolParaTest> emp = new ObjectMapper().readValue(empJson, new TypeReference<java.util.List<SchoolParaTest>>() {
+            });//list로받기
+            String normalParam = req.getParameter("normalParam"); // json 외 별도의 parameter
+            System.out.println("normalParam : " + normalParam);
+            if (emp != null) {
+                for (SchoolParaTest e : emp) {
+                    System.out.println("name : " + e.getName());
+                    System.out.println("empNo : " + e.getEmpNo());
+                    System.out.println("deptName : " + e.getDeptName());
+                    System.out.println("cellphone : " + e.getCellphone());
+                }
+            }
+        } catch (JsonParseException e) {
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        logger.info("hi.....");
+
+        System.out.println("hi");
+
+        return new SchoolParaTest();
+    }
+    /*
+    http://localhost:8080/paraTest.do?empJson=[{"empNo":"123","name":"kim","deptName":"aa","cellphone":"010123456"},{"empNo":"456","name":"lee","cellphone":"010112342"}]&normalParam=123
+    */
+    /*-----------------------------------PARA TEST-----------------------------------------------*/
 
     @RequestMapping(value = "/jsonTest.do")
     public @ResponseBody
@@ -73,7 +115,8 @@ public class MainContoller {
         System.out.println("jsonTest");
         return board;
     }
-    @RequestMapping(value = "/jsonTest1.do")
+
+    @RequestMapping(value = "/jsonTest1.do",method= RequestMethod.GET)
     public @ResponseBody
     Object jsonTest1() { //가상의 배열및 리스트에 데이터 add
         SchoolBasicInfo1 schInfo = new SchoolBasicInfo1();
