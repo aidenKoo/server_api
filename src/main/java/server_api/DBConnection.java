@@ -3,8 +3,10 @@ package server_api;
 /**
  * Created by aiden on 2017-06-27.
  */
-public class DBConnection {
-    public DBConnection(){
+import java.sql.Connection;
+import java.sql.DriverManager;
+import org.junit.jupiter.api.Test;
 
-    }
+public class DBConnection {
+
 }

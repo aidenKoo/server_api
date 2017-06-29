@@ -1,6 +1,7 @@
 package server_api;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Map;
 
 /**
  * Created by aiden on 2017-06-23.
@@ -41,9 +43,12 @@ public class MainContoller {
 
     }
 
-    @RequestMapping(value = "/jsonTest1.do")
+     @RequestMapping(value = "/jsonTest1.do")
     public @ResponseBody
     Object jsonTest1() { //가상의 배열및 리스트에 데이터 add
+/*        DBConnection DBtest = new DBConnection();
+        DBtest.testConnection();*/
+
         Board board = new Board();
         board.setSeq(1);
         board.setTitle("제목");
