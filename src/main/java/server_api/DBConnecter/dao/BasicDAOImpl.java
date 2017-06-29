@@ -1,5 +1,9 @@
 
 package server_api.DBConnecter.dao;
+/*
+ * Created by aiden on 2017-06-29.
+ * 참조 http://blog.naver.com/PostView.nhn?blogId=ddraemon1&logNo=220444202520
+ */
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;

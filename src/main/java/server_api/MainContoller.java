@@ -11,8 +11,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 
-/**
- * Created by aiden on 2017-06-23.
+/*
+ * Created by aiden on 2017-06-29.
+ * 참조 http://blog.naver.com/PostView.nhn?blogId=ddraemon1&logNo=220444202520
  */
 @Controller
 public class MainContoller {
@@ -43,9 +44,9 @@ public class MainContoller {
 
     }
 
-     @RequestMapping(value = "/jsonTest1.do")
+    @RequestMapping(value = "/jsonTest.do")
     public @ResponseBody
-    Object jsonTest1() { //가상의 배열및 리스트에 데이터 add
+    Object jsonTest() { //가상의 배열및 리스트에 데이터 add
 /*        DBConnection DBtest = new DBConnection();
         DBtest.testConnection();*/
 
@@ -65,10 +66,23 @@ public class MainContoller {
         filelist.add(boardFile);
         board.setFilelist(filelist);
 
+
+
+        logger.info("jsonTest.....");
+
+        System.out.println("jsonTest");
+        return board;
+    }
+    @RequestMapping(value = "/jsonTest1.do")
+    public @ResponseBody
+    Object jsonTest1() { //가상의 배열및 리스트에 데이터 add
+        SchoolBasicInfo1 schInfo = new SchoolBasicInfo1();
+        schInfo.getBasicInfoBySeq(1);
+
         logger.info("jsonTest1.....");
 
         System.out.println("jsonTest1");
-        return board;
+        return schInfo;
     }
     @RequestMapping(value = "/jsonTest2.do")
     public @ResponseBody
