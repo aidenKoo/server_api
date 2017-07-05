@@ -75,7 +75,7 @@
     <bean
             id="schMasterInfoDAO"
             name = "schMasterInfo"
-            class="server_api.DBConnecter.dao.SchMasterInfoMasterInfoDAOImpl"
+            class="server_api.DBConnecter.dao.SchMasterInfoDAOImpl"
             parent="abstractSchMasterInfoDAO" >
     </bean>
 </beans>

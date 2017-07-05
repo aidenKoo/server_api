@@ -21,7 +21,7 @@ public class SchMaterInfoTest {
     public  void mybatis(SchMasterInfo requestedSchMasterInfo){
         ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/config/DBContext/*-context.xml");
 
-        SchMasterInfoMasterInfoDAOImpl d = (SchMasterInfoMasterInfoDAOImpl)ctx.getBean("schMasterInfoDAO");
+        SchMasterInfoDAOImpl d = (SchMasterInfoDAOImpl)ctx.getBean("schMasterInfoDAO");
 
 /*
         SchoolBasicInfoDAOService d = (SchoolBasicInfoDAOService)ctx.getBean("schoolBasicInfoDAO");

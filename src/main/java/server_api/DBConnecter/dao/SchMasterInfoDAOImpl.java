@@ -7,7 +7,7 @@ package server_api.DBConnecter.dao;
 
 import java.util.List;
 
-public class SchMasterInfoMasterInfoDAOImpl extends AbstractBaseDAO implements SchMasterInfoDAO {
+public class SchMasterInfoDAOImpl extends AbstractBaseDAO implements SchMasterInfoDAO {
 
 	private static final long serialVersionUID = -2920396419915886645L;
 
