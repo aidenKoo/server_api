@@ -27,6 +27,7 @@
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/config/action-context.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/config/servlet-context.xml</file>
           <file>file://$MODULE_DIR$/src/main/resources/config/DBContext/dao-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/config/DBContext/root-context.xml</file>
         </fileset>
       </configuration>
     </facet>

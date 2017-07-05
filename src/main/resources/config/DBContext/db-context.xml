@@ -64,4 +64,18 @@
             parent="abstractBaseDAO" >
     </bean>
 
+    <bean
+            id="abstractSchMasterInfoDAO"
+            class="server_api.DBConnecter.dao.AbstractSchMasterInfoDAO"
+            abstract="true">
+        <property
+                name="sqlSessionFactory"
+                ref="sqlSessionFactory" />
+    </bean>
+    <bean
+            id="schMasterInfoDAO"
+            name = "schMasterInfo"
+            class="server_api.DBConnecter.dao.SchMasterInfoMasterInfoDAOImpl"
+            parent="abstractSchMasterInfoDAO" >
+    </bean>
 </beans>
