@@ -7,6 +7,7 @@ package server_api.DBConnecter.dao;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.omg.CORBA.Object;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionException;
@@ -47,15 +48,15 @@ public abstract class AbstractSchMasterInfoDAO extends DefaultTransactionDefinit
 		}
 	}
 
-	protected <SchoolBasicInfo> List<SchoolBasicInfo> selectList(String sqlId) {
+	protected <SchMasterInfo> List<SchMasterInfo> selectList(String sqlId) {
 		return selectList(sqlId, null);
 	}
 	
-	protected <SchoolBasicInfo> List<SchoolBasicInfo> selectList(String sqlId, SchoolBasicInfo param) {
+	protected <SchMasterInfo> List<SchMasterInfo> selectList(String sqlId, SchMasterInfo param) {
 		SqlSession session = sqlSessionFactory.openSession();
 
 		try {
-			List<SchoolBasicInfo> data;
+			List<SchMasterInfo> data;
 			if (null == param) {
 				data = session.selectList(sqlId);
 			} else {

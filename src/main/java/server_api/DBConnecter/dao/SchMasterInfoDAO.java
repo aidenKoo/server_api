@@ -12,8 +12,8 @@ public interface SchMasterInfoDAO {
 	public int    add(String sqlId, SchMasterInfo param);
 	public int    del(String sqlId, SchMasterInfo param);
 	
-	public <SchoolBasicInfo> List<SchoolBasicInfo> list(String sqlId);
-	public <SchoolBasicInfo> List<SchoolBasicInfo> list(String sqlId, SchoolBasicInfo param);
+	public <SchMasterInfo> List<SchMasterInfo> list(String sqlId);
+	public <SchMasterInfo> List<SchMasterInfo> list(String sqlId, SchMasterInfo param);
 	
 	public void transactionStart();
 	public void transactionCommit();

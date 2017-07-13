@@ -30,6 +30,7 @@ public class SchMasterInfo {
     int	sch_totalStu;
     double	sch_grade;
     String	sch_foundDate;
+    String etc_text="";
 
     public SchMasterInfo(){
     }
@@ -53,6 +54,7 @@ public class SchMasterInfo {
     public 	int	 getSch_totalStu	(){ return sch_totalStu	; }
     public 	double	 getSch_grade	(){ return sch_grade	; }
     public 	String	 getSch_foundDate	(){ return 	sch_foundDate	; }
+    public 	String	 getEtc_text    (){ return 	etc_text	; }
 
     public 	void	setSch_seq	(	int 	sch_seq	)	{this.	sch_seq	=	sch_seq	; }
     public 	void	setSch_name	(	String	sch_name	)	{this.	sch_name	=	sch_name	; }
@@ -74,12 +76,13 @@ public class SchMasterInfo {
     public 	void	setSch_totalStu	(	int	sch_totalStu	)	{this.	sch_totalStu	=	sch_totalStu	; }
     public 	void	setSch_grade	(	double	sch_grade	)	{this.	sch_grade	=	sch_grade	; }
     public 	void	setSch_foundDate	(	String	sch_foundDate	)	{this.	sch_foundDate	=	sch_foundDate	; }
+    public 	void	setEtc_text	(	String	etc_text	)	{this.	etc_text	=	etc_text	; }
 
 
 
-    public Object getBasicInfoBySeq(int thisSeq){
+    public Object getMasterInfoBySeq(int thisSeq){
         DummyDBConnection dbc = new DummyDBConnection();
-        dbc.setParmAtSQLQuery("SELECT * FROM basic_info WHERE sch_seq=" + thisSeq);
+        dbc.setParmAtSQLQuery("SELECT * FROM master_info WHERE sch_seq=" + thisSeq);
         List listA = dbc.getResult();
         sch_seq = Integer.parseInt(listA.get(0).toString());
         sch_name	=	listA.get(1).toString();
@@ -103,7 +106,7 @@ public class SchMasterInfo {
         sch_foundDate	= listA.get(19).toString();
         return this;
     }
-    public ArrayList<SchMasterInfo> getSchoolBasicInfos(){
+    public ArrayList<SchMasterInfo> getSchMasterInfos(){
         return null;
     };
 

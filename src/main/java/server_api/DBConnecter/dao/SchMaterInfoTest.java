@@ -13,7 +13,7 @@ public class SchMaterInfoTest {
     public static void main(String[] args){
         SchMaterInfoTest s = new SchMaterInfoTest();
         SchMasterInfo requestedSchMasterInfo = new SchMasterInfo();
-        requestedSchMasterInfo.setSch_seq(1);
+        requestedSchMasterInfo.setSch_name("1");
         System.out.println(requestedSchMasterInfo.getSch_seq());
 
         s.mybatis(requestedSchMasterInfo);
@@ -24,13 +24,13 @@ public class SchMaterInfoTest {
         SchMasterInfoDAOImpl d = (SchMasterInfoDAOImpl)ctx.getBean("schMasterInfoDAO");
 
 /*
-        SchoolBasicInfoDAOService d = (SchoolBasicInfoDAOService)ctx.getBean("schoolBasicInfoDAO");
+        SchoolMasterInfoDAOService d = (SchoolMasterInfoDAOService)ctx.getBean("schoolMasterInfoDAO");
 */
         System.out.println(requestedSchMasterInfo.getSch_seq());
         List<SchMasterInfo> schList = (List<SchMasterInfo>) d.list("server_api.SchMasterInfo.getSchMasterInfos",requestedSchMasterInfo);
              System.out.println("결과값: " + schList);
 
-/*        String s = (String)d.select("server_api.SchMasterInfo",requestedSchoolBasicInfo);
+/*        String s = (String)d.select("server_api.SchMasterInfo",requestedSchMasterInfo);
         System.out.println("결과값: " + s);*/
 
 

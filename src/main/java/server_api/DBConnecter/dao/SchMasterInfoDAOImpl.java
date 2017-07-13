@@ -7,7 +7,7 @@ package server_api.DBConnecter.dao;
 
 import java.util.List;
 
-public class SchMasterInfoDAOImpl extends AbstractBaseDAO implements SchMasterInfoDAO {
+public class SchMasterInfoDAOImpl extends AbstractSchMasterInfoDAO implements SchMasterInfoDAO {
 
 	private static final long serialVersionUID = -2920396419915886645L;
 
@@ -34,10 +34,10 @@ public class SchMasterInfoDAOImpl extends AbstractBaseDAO implements SchMasterIn
 	}
 	
 	// 다건조회
-	public <SchoolBasicInfo> List<SchoolBasicInfo> list(String sqlId){
+	public <SchMasterInfo> List<SchMasterInfo> list(String sqlId){
 		return super.selectList(sqlId);
 	}
-	public <SchoolBasicInfo> List<SchoolBasicInfo> list(String sqlId, SchoolBasicInfo param){
+	public <SchMasterInfo> List<SchMasterInfo> list(String sqlId, SchMasterInfo param){
 		return super.selectList(sqlId, param);
 	}
 	
