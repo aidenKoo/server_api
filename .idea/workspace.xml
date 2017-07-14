@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b11d3a15-a4a9-4422-af41-305cdd673148" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config/DBContext/db-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/config/DBContext/db-context.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/DBContext/dao-context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/config/mybatis/sql/mariadb/sample.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/Board.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/BoardFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/DBConnecter/dao/AbstractBaseDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/DBConnecter/dao/BasicDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/DBConnecter/dao/BasicDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/DBConnecter/dao/Sample.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/DBConnecter/dao/SchMasterInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/DBConnecter/dao/SchMaterInfoTest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/DBConnection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/DummyDBConnection.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/MainContoller$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/MainContoller$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/MainContoller$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/MainContoller$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/MainContoller.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/SchoolBasicInfo1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/server_api/SchoolParaTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfo.java" afterPath="$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,7 +41,7 @@
       <file leaf-file-name="MainContoller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/server_api/MainContoller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2128">
+            <state relative-caret-position="-304">
               <caret line="79" column="70" lean-forward="false" selection-start-line="79" selection-start-column="70" selection-end-line="79" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -31,17 +50,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchMasterInfo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SchMasterInfo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="532">
+              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchMasterInfo.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SchMasterInfo.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/sql/mariadb/SchMasterInfo.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
@@ -62,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/db.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="1" column="44" lean-forward="true" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+              <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -72,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMaterInfoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,7 +101,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/config/DBContext/db-context.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="35" column="98" lean-forward="true" selection-start-line="35" selection-start-column="98" selection-end-line="35" selection-end-column="98" />
+              <caret line="35" column="98" lean-forward="false" selection-start-line="35" selection-start-column="98" selection-end-line="35" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -104,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfoDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+              <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -230,11 +249,11 @@
         <option value="$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/BasicDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/AbstractSchMasterInfoDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMaterInfoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/mybatis/sql/mariadb/SchMasterInfo.xml" />
         <option value="$PROJECT_DIR$/src/main/java/server_api/MainContoller.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/DBContext/db-context.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfo.java" />
       </list>
     </option>
   </component>
@@ -1442,12 +1461,12 @@
       <workItem from="1499951967214" duration="1509000" />
       <workItem from="1499953964419" duration="2295000" />
       <workItem from="1500008459584" duration="1146000" />
-      <workItem from="1500009669312" duration="3096000" />
+      <workItem from="1500009669312" duration="3596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123641000" />
+    <option name="totallyTimeSpent" value="124141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
@@ -1467,13 +1486,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915523" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18412699" sideWeight="0.4789695" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18412699" sideWeight="0.4789695" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3164021" sideWeight="0.75989586" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3164021" sideWeight="0.75989586" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16388309" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
@@ -1710,15 +1729,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/config/mybatis/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="44" lean-forward="true" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="25" />
+          <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1736,7 +1747,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1752,25 +1763,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMaterInfoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/server_api/MainContoller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2128">
-          <caret line="79" column="70" lean-forward="false" selection-start-line="79" selection-start-column="70" selection-end-line="79" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config/DBContext/db-context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="35" column="98" lean-forward="true" selection-start-line="35" selection-start-column="98" selection-end-line="35" selection-end-column="98" />
+          <caret line="35" column="98" lean-forward="false" selection-start-line="35" selection-start-column="98" selection-end-line="35" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -1787,6 +1788,24 @@
             <marker date="1500012064415" expanded="true" signature="2358:2504" ph="SELECT * FRO... master_info" />
             <marker date="1500012064415" expanded="true" signature="2682:2763" ph="SELECT * FRO... master_info" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server_api/MainContoller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="79" column="70" lean-forward="false" selection-start-line="79" selection-start-column="70" selection-end-line="79" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/server_api/DBConnecter/dao/SchMasterInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

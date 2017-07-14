@@ -74,38 +74,8 @@ public class SchMasterInfo {
     public 	void	setSch_totalStu	(	int	sch_totalStu	)	{this.	sch_totalStu	=	sch_totalStu	; }
     public 	void	setSch_grade	(	double	sch_grade	)	{this.	sch_grade	=	sch_grade	; }
     public 	void	setSch_foundDate	(	String	sch_foundDate	)	{this.	sch_foundDate	=	sch_foundDate	; }
-    public 	void	setEtc_text	(	String	etc_text	)	{this.	etc_text	=	etc_text	; }
+    public 	void	setEtc_text	(	String	etc_text	)	{this.	etc_text	=	etc_text	; }}
 
 
 
-    public Object getMasterInfoBySeq(int thisSeq){
-        DummyDBConnection dbc = new DummyDBConnection();
-        dbc.setParmAtSQLQuery("SELECT * FROM master_info WHERE sch_seq=" + thisSeq);
-        List listA = dbc.getResult();
-        sch_seq = Integer.parseInt(listA.get(0).toString());
-        sch_name	=	listA.get(1).toString();
-        sch_adrs	=	listA.get(2).toString();
-        sch_locX	=	Double.parseDouble(listA.get(3).toString());
-        sch_locY	=	Double.parseDouble(listA.get(4).toString());
-        sch_aftPrgm	= Integer.parseInt(listA.get(5).toString());
-        sch_feat	=	listA.get(6).toString();
-        sch_employ	= Double.parseDouble(listA.get(7).toString());
-        sch_found	=	listA.get(8).toString();
-        sch_phone	= Integer.parseInt(listA.get(9).toString());
-        sch_tchNum	= Integer.parseInt(listA.get(10).toString());
-        sch_mTch	= Integer.parseInt(listA.get(11).toString());
-        sch_fTch	= Integer.parseInt(listA.get(12).toString());
-        sch_spTch	= Integer.parseInt(listA.get(13).toString());
-        sch_tchPerStu	= Double.parseDouble(listA.get(14).toString());
-        sch_mStu	= Integer.parseInt(listA.get(15).toString());
-        sch_fStu	= Integer.parseInt(listA.get(16).toString());
-        sch_totalStu	= Integer.parseInt(listA.get(17).toString());
-        sch_grade	= Double.parseDouble(listA.get(18).toString());
-        sch_foundDate	= listA.get(19).toString();
-        return this;
-    }
-    public ArrayList<SchMasterInfo> getSchMasterInfos(){
-        return null;
-    };
 
-}

@@ -48,21 +48,8 @@
         <property name="transactionManager" ref="transactionManager" />
     </bean>
 
-    <!--6. DAO 설정-->
-    <bean
-            id="abstractBaseDAO"
-            class="server_api.DBConnecter.dao.AbstractBaseDAO"
-            abstract="true">
-        <property
-                name="sqlSessionFactory"
-                ref="sqlSessionFactory" />
-    </bean>
-    <bean
-            id="basicDAO"
-            name = "basicDAO"
-            class="server_api.DBConnecter.dao.BasicDAOImpl"
-            parent="abstractBaseDAO" >
-    </bean>
+
+
 
     <bean
             id="abstractSchMasterInfoDAO"
