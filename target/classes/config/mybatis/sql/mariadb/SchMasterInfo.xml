@@ -39,11 +39,11 @@
         SELECT *  FROM master_info WHERE sch_seq = #{sch_seq}
     </select>
     <select id="getSchMasterInfo" resultType="server_api.DBConnecter.dao.SchMasterInfo" parameterType="server_api.DBConnecter.dao.SchMasterInfo">
-                SELECT sch_seq, sch_name  FROM master_info WHERE sch_seq = #{sch_seq}// ? ???? ??? ?? ? ??
+                SELECT sch_seq, sch_name  FROM master_info WHERE sch_seq = #{sch_seq}
         </select>
 
     <select id="getSynthesistSchMasterInfos" resultMap="SchMasterInfosResultMap" parameterType="server_api.DBConnecter.dao.SchMasterInfo">
-        SELECT *  FROM master_info WHERE sch_name like  #{sch_name} OR sch_adrs like #{sch_name}//"getSynthesistSchMasterInfos"???, ???? ??? ???? test? ??
+        SELECT *  FROM master_info WHERE sch_name like  #{sch_name} OR sch_adrs like #{sch_name}
     </select>
     <select id="getSynthesisSchMasterInfo" resultType="server_api.DBConnecter.dao.SchMasterInfo" parameterType="server_api.DBConnecter.dao.SchMasterInfo">
         SELECT *  FROM master_info WHERE sch_name = #{sch_name} OR sch_adrs = #{sch_name}

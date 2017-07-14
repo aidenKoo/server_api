@@ -60,7 +60,7 @@ public class MainContoller {
 
                     SchMasterInfoDAOImpl d = (SchMasterInfoDAOImpl)ctx.getBean("schMasterInfoDAO");
 
-                    schList = (java.util.List<SchMasterInfo>) d.list("server_api.SchMasterInfo.getSchMasterInfos",requestedSchMasterInfo);
+                    schList = (java.util.List<SchMasterInfo>) d.list("server_api.SchMasterInfo.getSchMasterInfos",requestedSchMasterInfo);//db커넥션 정의, requestedSchMasterInfo 질문. 질문항목
 
 
 
@@ -179,39 +179,7 @@ public class MainContoller {
         return "index";
 
     }
-    /*-----------------------------------PARA TEST-----------------------------------------------*/
-    @RequestMapping(value = "/paraTest.do",method= RequestMethod.GET)
-    public @ResponseBody
-    SchoolParaTest paraTest (@RequestParam("empJson") String empJson, HttpServletRequest req) throws Exception {
 
-        try {
-            //SchoolParaTest[] emp = new ObjectMapper().readValue(empJson, SchoolParaTest[].class); // 배열로 받기
-            java.util.List<SchoolParaTest> emp = new ObjectMapper().readValue(empJson, new TypeReference<java.util.List<SchoolParaTest>>() {
-            });//list로받기
-            String normalParam = req.getParameter("normalParam"); // json 외 별도의 parameter
-            System.out.println("normalParam : " + normalParam);
-            if (emp != null) {
-                for (SchoolParaTest e : emp) {
-                    System.out.println("name : " + e.getName());
-                    System.out.println("empNo : " + e.getEmpNo());
-                    System.out.println("deptName : " + e.getDeptName());
-                    System.out.println("cellphone : " + e.getCellphone());
-                }
-            }
-        } catch (JsonParseException e) {
-            e.printStackTrace();
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        logger.info("hi.....");
-
-        System.out.println("hi");
-
-        return new SchoolParaTest();
-    }
     /*
     http://localhost:8080/paraTest.do?schMasterInfo=[{"sch_name":"123","":"","":"","":""},{"sch_name":"123","":"","":"","":""}]
     */
@@ -244,88 +212,5 @@ public class MainContoller {
         return schList;
     }
 
-    @RequestMapping(value = "/jsonTest1.do",method= RequestMethod.GET)
-    public @ResponseBody
-    Object jsonTest1() { //가상의 배열및 리스트에 데이터 add
-        SchoolBasicInfo1 schInfo = new SchoolBasicInfo1();
-        schInfo.getBasicInfoBySeq(1);
-
-        logger.info("jsonTest1.....");
-
-        System.out.println("jsonTest1");
-        return schInfo;
-    }
-    @RequestMapping(value = "/jsonTest2.do")
-    public @ResponseBody
-    Object jsonTest2() { //가상의 배열및 리스트에 데이터 add
-        Board board = new Board();
-        board.setSeq(1);
-        board.setTitle("제목");
-        board.setContent("내요내용내용");
-        board.setRegdate(new Date());
-        ArrayList<BoardFile> filelist = new ArrayList<BoardFile>();
-        BoardFile boardFile = null; boardFile = new BoardFile();
-        boardFile.setFileSeq(1); boardFile.setFileName("파일명1");
-        boardFile.setFileSize(1000); filelist.add(boardFile);
-        boardFile = new BoardFile();
-        boardFile.setFileSeq(2);
-        boardFile.setFileName("파일명2");
-        boardFile.setFileSize(25645);
-        filelist.add(boardFile);
-        board.setFilelist(filelist);
-
-        logger.info("jsonTest2.....");
-
-        System.out.println("jsonTest2");
-        return board;
-    }
-    @RequestMapping(value = "/jsonTest3.do")
-    public @ResponseBody
-    Object jsonTest3() { //가상의 배열및 리스트에 데이터 add
-        Board board = new Board();
-        board.setSeq(1);
-        board.setTitle("제목");
-        board.setContent("내요내용내용");
-        board.setRegdate(new Date());
-        ArrayList<BoardFile> filelist = new ArrayList<BoardFile>();
-        BoardFile boardFile = null; boardFile = new BoardFile();
-        boardFile.setFileSeq(1); boardFile.setFileName("파일명1");
-        boardFile.setFileSize(1000); filelist.add(boardFile);
-        boardFile = new BoardFile();
-        boardFile.setFileSeq(2);
-        boardFile.setFileName("파일명2");
-        boardFile.setFileSize(25645);
-        filelist.add(boardFile);
-        board.setFilelist(filelist);
-
-        logger.info("jsonTest3.....");
-
-        System.out.println("jsonTest3");
-        return board;
-    }
-    @RequestMapping(value = "/jsonTest4.do")
-    public @ResponseBody
-    Object jsonTest4() { //가상의 배열및 리스트에 데이터 add
-        Board board = new Board();
-        board.setSeq(1);
-        board.setTitle("제목");
-        board.setContent("내요내용내용");
-        board.setRegdate(new Date());
-        ArrayList<BoardFile> filelist = new ArrayList<BoardFile>();
-        BoardFile boardFile = null; boardFile = new BoardFile();
-        boardFile.setFileSeq(1); boardFile.setFileName("파일명1");
-        boardFile.setFileSize(1000); filelist.add(boardFile);
-        boardFile = new BoardFile();
-        boardFile.setFileSeq(2);
-        boardFile.setFileName("파일명2");
-        boardFile.setFileSize(25645);
-        filelist.add(boardFile);
-        board.setFilelist(filelist);
-
-        logger.info("jsonTest4.....");
-
-        System.out.println("jsonTest4");
-        return board;
-    }
 }
 
