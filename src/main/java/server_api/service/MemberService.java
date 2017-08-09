@@ -1,7 +1,7 @@
 package server_api.service;
 
 /**
- * Created by Owner on 2017-07-24.
+ * Created by Owner on 2017-08-09.
  */
-public class memberMapper {
+public class MemberService {
 }
