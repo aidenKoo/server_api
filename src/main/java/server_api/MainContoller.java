@@ -5,21 +5,22 @@ import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import server_api.DBConnecter.dao.SchMasterInfo;
 import server_api.DBConnecter.dao.SchMasterInfoDAOImpl;
 
 import javax.servlet.http.HttpServletRequest;
-import java.awt.*;
-import java.util.List;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /*
  * Created by aiden on 2017-06-29.
@@ -61,7 +62,6 @@ public class MainContoller {
                     SchMasterInfoDAOImpl d = (SchMasterInfoDAOImpl)ctx.getBean("schMasterInfoDAO");
 
                     schList = (java.util.List<SchMasterInfo>) d.list("server_api.SchMasterInfo.getSchMasterInfos",requestedSchMasterInfo);//db커넥션 정의, requestedSchMasterInfo 질문. 질문항목
-
 
 
                 }
@@ -118,6 +118,51 @@ public class MainContoller {
         }
         return schList;
     }
+
+
+    @RequestMapping(value = "/master_info/string/sch_name.do",method= RequestMethod.GET)
+    /*
+    http://localhost:8080/master_info/string/sch_name.do?schMasterInfo=[{"sch_name":"456"}]
+    */
+
+    public @ResponseBody
+    List<SchMasterInfo> stringSchName (@RequestParam("schMasterInfo") String schMasterInfo, HttpServletRequest req) throws Exception {
+
+        List<SchMasterInfo> schList = null;
+        try {
+            //SchoolParaTest[] emp = new ObjectMapper().readValue(empJson, SchoolParaTest[].class); // 배열로 받기
+            List<SchMasterInfo> requestedSchMasterInfos = new ObjectMapper().readValue(schMasterInfo, new TypeReference<java.util.List<SchMasterInfo>>() {
+            });//list로받기
+            if (requestedSchMasterInfos != null) {
+                for (SchMasterInfo requestedSchMasterInfo : requestedSchMasterInfos) {
+
+                    requestedSchMasterInfo.setSch_name("%"+requestedSchMasterInfo.getSch_name()+"%");
+
+                    ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/config/DBContext-context.xml");
+
+                    SchMasterInfoDAOImpl d = (SchMasterInfoDAOImpl)ctx.getBean("schMasterInfoDAO");
+
+                    schList = (java.util.List<SchMasterInfo>) d.list("server_api.SchMasterInfo.getSchnameSchMasterInfos",requestedSchMasterInfo);
+
+                    System.out.println("결과값: " + schList);
+
+                    System.out.println("select 종료");
+
+
+
+                }
+            }
+
+        } catch (JsonParseException e) {
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return schList;
+    }
+
 
     @RequestMapping(value = "/master_info/location.do",method= RequestMethod.GET)
     /*
