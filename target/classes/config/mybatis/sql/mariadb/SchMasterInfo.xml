@@ -49,6 +49,13 @@
         SELECT *  FROM master_info WHERE sch_name = #{sch_name} OR sch_adrs = #{sch_name}
     </select>
 
+    <select id="getSchnameSchMasterInfos" resultMap="SchMasterInfosResultMap" parameterType="server_api.DBConnector.dao.SchMasterInfo">
+        SELECT * FROM master_info WHERE sch_name like # {sch_name}
+    </select>
+    <select id="getSchnameSchMasterInfo" resultMap="server_api.DBConnecter.dao.SchMasterInfo" parameterType="server_api.DBConnector.dao.SchMasterInfo">
+        SELECT * FROM master_info WHERE sch_name = #{sch_name}
+    </select>
+
     <!--    <select id="getLocationSchMasterInfos" resultType="server_api.DBConnecter.dao.SchMasterInfo" parameterType="server_api.DBConnecter.dao.SchMasterInfo">
             SELECT *,
             (6371*acos(cos(radians(#{sch_locY}))*cos(radians(#{sch_locY}))*cos(radians(#{sch_locX})
