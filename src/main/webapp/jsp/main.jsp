@@ -1,16 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Owner
-  Date: 2017-07-24
-  Time: 오후 6:34
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>$Title$</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Main Page </title>
 </head>
 <body>
-$END$
+<h2>회원 전용 페이지</h2>
+${userid}님으로 로그인 하셨습니다.<br>
+${name }님 환영합니다<br>
+연락처 : ${phone }<br>
+이메일 : ${email }<br>
+<input type="button" value="로그아웃" onclick="location.href='logout.do'">
+<input type="button" value="모든회원보기" onclick="location.href='memberList.do'">
+<input type="button" value="회원수정페이지" onclick="location.href='memberUpdateForm.do'">
+
 </body>
 </html>
+
