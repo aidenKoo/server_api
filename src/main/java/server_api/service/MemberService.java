@@ -8,20 +8,20 @@
         import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.stereotype.Service;
 
-        import server_api.commons.Constant;
-        import server_api.dao.IMemberDao;
+        import org.springframework.transaction.annotation.Transactional;
         import server_api.commons.Constant;
         import server_api.dao.IMemberDao;
 
-        @Service
-public class MemberService {
+@Service
+public abstract class MemberService /*implements IMemberDao*/{
     @Autowired
     private IMemberDao memberDao;
 
-
+    @Transactional
     public String getData(){
         return "I am a boy";
     }
+    @Transactional
     public List<HashMap<String, Object>> selectAll() {
         return memberDao.selectAll();
     }
@@ -41,7 +41,7 @@ public class MemberService {
 //        }
 //        
 //    }
-
+    @Transactional
     public void joinMember(HashMap<String, Object> params){
 
         if(params.get("pwd").equals(params.get("pwd_CHECK")))
@@ -50,7 +50,7 @@ public class MemberService {
         }
     }
 
-
+    @Transactional
     public boolean login(String id, String pwd){
         HashMap<String, Object> result = memberDao.selectOne(id);
         if(result == null)
@@ -70,11 +70,12 @@ public class MemberService {
         }
     }
 
-    //회원 한명의 정보를 가져다주는 
+    //회원 한명의 정보를 가져다주는
+    @Transactional
     public HashMap<String, Object> getMemberInfo(String id){
         return memberDao.selectOne(id);
     }
-
+    @Transactional
     public void memberUpdate(HashMap<String, Object> params){
 
         if(params.get("pwd").equals(params.get("pwd_CHECK")))

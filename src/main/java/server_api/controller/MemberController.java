@@ -1,8 +1,23 @@
+/*
 
         package server_api.controller;
 
         import java.util.HashMap;
         import java.util.Map;
+
+        import org.apache.log4j.Logger;
+        import org.codehaus.jackson.JsonParseException;
+        import org.codehaus.jackson.map.JsonMappingException;
+        import org.codehaus.jackson.map.ObjectMapper;
+        import org.codehaus.jackson.type.TypeReference;
+        import org.springframework.context.ApplicationContext;
+        import org.springframework.context.support.ClassPathXmlApplicationContext;
+        import org.springframework.stereotype.Controller;
+        import org.springframework.ui.Model;
+        import org.springframework.web.bind.annotation.RequestMapping;
+        import org.springframework.web.bind.annotation.RequestMethod;
+        import org.springframework.web.bind.annotation.RequestParam;
+        import org.springframework.web.bind.annotation.ResponseBody;
 
         import javax.servlet.http.HttpSession;
 
@@ -14,24 +29,29 @@
         import org.springframework.web.servlet.ModelAndView;
 
         import server_api.service.MemberService;
+        import server_api.dao.IMemberDao;
+        import server_api.commons.Constant;
 
 //서비스주입받아서
 //받은 리퀘스트를 처리하기에 피룡한 서비스의 메소드를 호출해서 결과 획득 
 //결과 데이터랑 적절한 페이지 세팅해서 
-//모델엔뷰 리턴 
+//모델엔뷰 리턴
+
 @Controller
 public class MemberController {
     @Autowired
+    protected Logger logger = Logger.getLogger(this.getClass());
+    @Autowired
     private MemberService service;
 
-    @RequestMapping("test.do")
+    @RequestMapping("/test.do")
     public ModelAndView dummy(){
         ModelAndView mav = new ModelAndView();
         mav.addObject("attr",service.getData());
         mav.setViewName("test");
         return mav;
     }
-    @RequestMapping("memberList.do")
+    @RequestMapping("/memberList.do")
     public ModelAndView dummy2(){
         ModelAndView mav = new ModelAndView();
         mav.addObject("memberList",service.selectAll());
@@ -48,12 +68,12 @@ public class MemberController {
 //둘다 없는 ㅕㅇ우
 //void 
 
-    @RequestMapping("loginForm.do")
+    @RequestMapping("/loginForm.do")
     public String loginForm(){
         return "loginForm";
     }
 
-    @RequestMapping("joinForm.do")
+    @RequestMapping("/joinForm.do")
     public void joinForm(){
 
     }
@@ -84,7 +104,7 @@ public class MemberController {
 //        //리다이렉트하는 방법
 //    }
 
-    @RequestMapping("join.do")
+    @RequestMapping("/join.do")
     public String join(@RequestParam HashMap<String, Object> params)
     {
         System.out.println(params);
@@ -109,7 +129,7 @@ public class MemberController {
 //    
 //    }
 
-    @RequestMapping("login.do")
+    @RequestMapping("/login.do")
     public ModelAndView login(HttpSession session,String id, String pwd){
 //    성공 실패에 따라 리다이렉트 방향 결정
         //session사용은 매개변수에 session참조변수를 두면 자동으로 들어옵니다 
@@ -129,7 +149,7 @@ public class MemberController {
 
     }
 
-    @RequestMapping("main.do")
+    @RequestMapping("/main.do")
     public String main(Model model,HttpSession session ){
         String userid = (String) session.getAttribute("userid");
         if(userid == null)
@@ -144,14 +164,14 @@ public class MemberController {
 
 
     }
-    @RequestMapping("logout.do")
+    @RequestMapping("/logout.do")
     public String logout(HttpSession session){
 //        session.invalidate();
         session.removeAttribute("userid");
         return "redirect:loginForm.do";
 
     }
-    @RequestMapping("memberUpdateForm.do")
+    @RequestMapping("/memberUpdateForm.do")
     public String memberUpdateForm(Model model,HttpSession session){
         String userid = (String) session.getAttribute("userid");
         if(userid == null)
@@ -159,7 +179,7 @@ public class MemberController {
         model.addAllAttributes(service.getMemberInfo(userid));
         return "memberUpdateForm";
     }
-    @RequestMapping("memberUpdate.do")
+    @RequestMapping("/memberUpdate.do")
     public String memberUpdate(@RequestParam HashMap<String, Object> params){
         service.memberUpdate(params);
         return "redirect:main.do";
@@ -170,3 +190,4 @@ public class MemberController {
 }
  
 
+*/
