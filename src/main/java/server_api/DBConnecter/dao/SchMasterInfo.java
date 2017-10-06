@@ -11,11 +11,11 @@ public class SchMasterInfo {
     int sch_seq;
     String sch_name;
     String sch_adrs;
+    String sch_adrsSi;
     double sch_locX;
     double sch_locY;
     int	sch_aftPrgm;
     String	sch_feat;
-    double	sch_employ;
     String	sch_found;
     int	sch_phone;
     int	sch_tchNum;
@@ -28,18 +28,18 @@ public class SchMasterInfo {
     int	sch_totalStu;
     double	sch_grade;
     String	sch_foundDate;
-    String etc_text="";
+
 
     public SchMasterInfo(){
     }
     public 	int 	 getSch_seq	(){ return sch_seq; }
     public 	String	 getSch_name	(){ return sch_name; }
     public 	String	 getSch_adrs	(){ return sch_adrs; }
+    public 	String	 getSch_adrsSi	(){ return sch_adrs; }
     public 	double	 getSch_locX	(){ return	sch_locX; }
     public 	double	 getSch_locY	(){ return sch_locY; }
     public 	int	 getSch_aftPrgm	(){ return 	sch_aftPrgm	; }
     public 	String	 getSch_feat	(){ return 	sch_feat	; }
-    public 	double	 getSch_employ	(){ return 	sch_employ	; }
     public 	String	 getSch_found	(){ return 	sch_found	; }
     public 	int	 getSch_phone	(){ return 	sch_phone	; }
     public 	int	 getSch_tchNum	(){ return 	sch_tchNum	; }
@@ -52,16 +52,15 @@ public class SchMasterInfo {
     public 	int	 getSch_totalStu	(){ return sch_totalStu	; }
     public 	double	 getSch_grade	(){ return sch_grade	; }
     public 	String	 getSch_foundDate	(){ return 	sch_foundDate	; }
-    public 	String	 getEtc_text    (){ return 	etc_text	; }
 
     public 	void	setSch_seq	(	int 	sch_seq	)	{this.	sch_seq	=	sch_seq	; }
     public 	void	setSch_name	(	String	sch_name	)	{this.	sch_name	=	sch_name	; }
     public 	void	setSch_adrs	(	String	sch_adrs	)	{this.	sch_adrs	=	sch_adrs	; }
+    public 	void	setSch_adrsSi	(	String	sch_adrsSi	)	{this.	sch_adrsSi	=	sch_adrsSi	; }
     public 	void	setSch_locX	(	double	sch_locX	)	{this.	sch_locX	=	sch_locX	; }
     public 	void	setSch_locY	(	double	sch_locY	)	{this.	sch_locY	=	sch_locY	; }
     public 	void	setsch_aftPrgm	(	int	sch_aftPrgm	)	{this.	sch_aftPrgm	=	sch_aftPrgm	; }
     public 	void	setSch_feat	(	String	sch_feat	)	{this.	sch_feat	=	sch_feat	; }
-    public 	void	setSch_employ	(	double	sch_employ	)	{this.	sch_employ	=	sch_employ	; }
     public 	void	setSch_found	(	String	sch_found	)	{this.	sch_found	=	sch_found	; }
     public 	void	setSch_phone	(	int	sch_phone	)	{this.	sch_phone	=	sch_phone	; }
     public 	void	setSch_tchNum	(	int	sch_tchNum	)	{this.	sch_tchNum	=	sch_tchNum	; }
@@ -74,7 +73,8 @@ public class SchMasterInfo {
     public 	void	setSch_totalStu	(	int	sch_totalStu	)	{this.	sch_totalStu	=	sch_totalStu	; }
     public 	void	setSch_grade	(	double	sch_grade	)	{this.	sch_grade	=	sch_grade	; }
     public 	void	setSch_foundDate	(	String	sch_foundDate	)	{this.	sch_foundDate	=	sch_foundDate	; }
-    public 	void	setEtc_text	(	String	etc_text	)	{this.	etc_text	=	etc_text	; }}
+
+}
 
 
 

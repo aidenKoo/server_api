@@ -21,7 +21,7 @@
           class="org.springframework.jdbc.datasource.DriverManagerDataSource" p:driverClassName="${jdbc.driverClassName}"
           p:url="${jdbc.url}" p:username="${jdbc.username}" p:password="${jdbc.password}"/>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" p:dataSource-ref="dataSource"
-          p:mapperLocations="classpath*:dao/mapper/*.xml"/>
+          p:mapperLocations="classpath*:server_api/dao/mapper/*.xml"/>
     <bean id="memberDao" class="org.mybatis.spring.mapper.MapperFactoryBean"
           p:sqlSessionFactory-ref="sqlSessionFactory">
         <property name="mapperInterface" value="server_api.dao.IMemberDao"></property>
