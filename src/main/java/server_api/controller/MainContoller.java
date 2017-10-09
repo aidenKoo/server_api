@@ -9,15 +9,27 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+<<<<<<< HEAD:src/main/java/server_api/controller/MainContoller.java
 import org.springframework.web.bind.annotation.*;
+=======
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+>>>>>>> master:src/main/java/server_api/controller/MainContoller.java
 import server_api.DBConnecter.dao.SchDetailInfo;
 import server_api.DBConnecter.dao.SchDetailInfoDAOImpl;
 import server_api.DBConnecter.dao.SchMasterInfo;
 import server_api.DBConnecter.dao.SchMasterInfoDAOImpl;
 
 import javax.servlet.http.HttpServletRequest;
+<<<<<<< HEAD:src/main/java/server_api/controller/MainContoller.java
 import java.util.List;
 import java.io.IOException;
+=======
+import java.io.IOException;
+import java.util.List;
+>>>>>>> master:src/main/java/server_api/controller/MainContoller.java
 
 /*
  * Created by aiden on 2017-06-29.
@@ -209,9 +221,15 @@ public class MainContoller {
                     schList = (java.util.List<SchMasterInfo>) d.list("server_api.SchMasterInfo.getAdrsSchMasterInfo",requestedSchMasterInfo);
 
                     System.out.println("결과값: " + schList);
+<<<<<<< HEAD:src/main/java/server_api/controller/MainContoller.java
 
                     System.out.println("select 종료");
 
+=======
+
+                    System.out.println("select 종료");
+
+>>>>>>> master:src/main/java/server_api/controller/MainContoller.java
 
                 }
             }
@@ -305,6 +323,9 @@ public class MainContoller {
     }
 
 
+<<<<<<< HEAD:src/main/java/server_api/controller/MainContoller.java
 
+=======
+>>>>>>> master:src/main/java/server_api/controller/MainContoller.java
 }
 

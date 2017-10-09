@@ -48,6 +48,7 @@
         <property name="transactionManager" ref="transactionManager" />
     </bean>
 
+<<<<<<< HEAD
     <!--6. DAO 설정-->
     <bean
             id="abstractBaseDAO"
@@ -63,6 +64,10 @@
             class="server_api.DBConnecter.dao.BasicDAOImpl"
             parent="abstractBaseDAO" >
     </bean>
+=======
+
+
+>>>>>>> master
 
     <bean
             id="abstractSchMasterInfoDAO"
@@ -80,17 +85,40 @@
     </bean>
 
     <bean
+<<<<<<< HEAD
             id="abstractSchDetailInfoDAO"
             class="server_api.DBConnecter.dao.AbstractSchDetailInfoDAO"
             abstract="true">
         <property
                 name="sqlSessionFactory"
                 ref="sqlSessionFactory" />
+=======
+        id="abstractSchDetailInfoDAO"
+        class="server_api.DBConnecter.dao.AbstractSchDetailInfoDAO"
+        abstract="true">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+>>>>>>> master
     </bean>
     <bean
             id="schDetailInfoDAO"
             name = "schDetailInfo"
             class="server_api.DBConnecter.dao.SchDetailInfoDAOImpl"
+<<<<<<< HEAD
             parent="abstractSchDetailInfoDAO" >
     </bean>
 </beans>
+=======
+            parent="abstractSchDetailInfoDAO">
+    </bean>
+
+<!--
+    <bean id="memberDao" class="org.mybatis.spring.mapper.MapperFactoryBean"
+          xsi:sqlSessionFactory-ref="sqlSessionFactory"
+          xsi:mapperLocations="server_api/dao/mapper/*.xml">
+        <property name="mapperInterface" value="server_api.dao.IMemberDao"></property>
+    </bean>
+-->
+
+
+</beans>
+>>>>>>> master

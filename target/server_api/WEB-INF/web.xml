@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 <!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
+=======
+
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+>>>>>>> master
 
 
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
@@ -12,6 +19,7 @@
          version="3.1">
 
 
+<<<<<<< HEAD
 <context-param>
 
     <param-name>contextConfigLocation</param-name>
@@ -19,6 +27,14 @@
     <!--classpath*:config/spring/context-*.xml--><param-value></param-value>
 
 </context-param>
+=======
+    <context-param>
+
+        <param-name>contextConfigLocation</param-name>
+
+        <!--classpath*:config/spring/context-*.xml--><param-value>/WEB-INF/config/*-context.xml</param-value>
+    </context-param>
+>>>>>>> master
 
 
     <listener>
@@ -28,6 +44,7 @@
     </listener>
 
 
+<<<<<<< HEAD
 <servlet>
 
     <servlet-name>action</servlet-name>
@@ -54,10 +71,39 @@
     <url-pattern>*.do</url-pattern>
 
 </servlet-mapping>
+=======
+    <servlet>
+
+        <servlet-name>action</servlet-name>
+
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+        <init-param>
+
+            <param-name>contextConfigLocation</param-name>
+
+            <param-value>/WEB-INF/config/*-servlet.xml</param-value>
+
+        </init-param>
+
+        <load-on-startup>1</load-on-startup>
+
+    </servlet>
+
+
+    <servlet-mapping>
+
+        <servlet-name>action</servlet-name>
+
+        <url-pattern>*.do</url-pattern>
+
+    </servlet-mapping>
+>>>>>>> master
 
 
 
 
+<<<<<<< HEAD
 <welcome-file-list>
 
     <welcome-file>/jsp/index.jsp</welcome-file>
@@ -93,6 +139,43 @@
     <url-pattern>*.do</url-pattern>
 
 </filter-mapping>
+=======
+    <welcome-file-list>
+
+        <welcome-file>/jsp/index.jsp</welcome-file>
+
+    </welcome-file-list>
+
+
+
+    <filter>
+
+        <filter-name>encodingFilter</filter-name>
+
+        <filter-class>
+
+            org.springframework.web.filter.CharacterEncodingFilter
+
+        </filter-class>
+
+        <init-param>
+
+            <param-name>encoding</param-name>
+
+            <param-value>utf-8</param-value>
+
+        </init-param>
+
+    </filter>
+
+    <filter-mapping>
+
+        <filter-name>encodingFilter</filter-name>
+
+        <url-pattern>*.do</url-pattern>
+
+    </filter-mapping>
+>>>>>>> master
 
 
 </web-app>

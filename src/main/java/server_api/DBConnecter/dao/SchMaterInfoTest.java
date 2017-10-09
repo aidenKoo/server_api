@@ -27,7 +27,7 @@ public class SchMaterInfoTest {
         SchoolMasterInfoDAOService d = (SchoolMasterInfoDAOService)ctx.getBean("schoolMasterInfoDAO");
 */
         System.out.println(requestedSchMasterInfo.getSch_seq());
-        List<SchMasterInfo> schList = (List<SchMasterInfo>) d.list("server_api.SchMasterInfo.getSchMasterInfos",requestedSchMasterInfo);
+        List<SchMasterInfo> schList = (List<SchMasterInfo>) d.list("server_api.SchMasterInfo.getSchMasterInfos",requestedSchMasterInfo);//객체명.메소드명
              System.out.println("결과값: " + schList);
 
 /*        String s = (String)d.select("server_api.SchMasterInfo",requestedSchMasterInfo);

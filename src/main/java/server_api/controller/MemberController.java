@@ -1,6 +1,9 @@
 /*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         package server_api.controller;
 
         import java.util.HashMap;
@@ -11,7 +14,10 @@
         import org.codehaus.jackson.map.JsonMappingException;
         import org.codehaus.jackson.map.ObjectMapper;
         import org.codehaus.jackson.type.TypeReference;
+<<<<<<< HEAD
         import org.springframework.beans.factory.annotation.Qualifier;
+=======
+>>>>>>> master
         import org.springframework.context.ApplicationContext;
         import org.springframework.context.support.ClassPathXmlApplicationContext;
         import org.springframework.stereotype.Controller;
@@ -40,14 +46,22 @@
 //모델엔뷰 리턴
 
 @Controller
+<<<<<<< HEAD
 @RequestMapping("/member")
 public class MemberController {
+=======
+public class MemberController {
+    @Autowired
+>>>>>>> master
     protected Logger logger = Logger.getLogger(this.getClass());
     @Autowired
     private MemberService service;
 
+<<<<<<< HEAD
     @Autowired
     //@Qualifier("service")
+=======
+>>>>>>> master
     @RequestMapping("/test.do")
     public ModelAndView dummy(){
         ModelAndView mav = new ModelAndView();
@@ -55,11 +69,17 @@ public class MemberController {
         mav.setViewName("test");
         return mav;
     }
+<<<<<<< HEAD
     @Autowired
     //@Qualifier("service")
     @RequestMapping("/memberList.do")
     public ModelAndView dummy2(){
         ModelAndView mav = new ModelAndView("hi");
+=======
+    @RequestMapping("/memberList.do")
+    public ModelAndView dummy2(){
+        ModelAndView mav = new ModelAndView();
+>>>>>>> master
         mav.addObject("memberList",service.selectAll());
         mav.setViewName("selectAll");
         return mav;
@@ -194,4 +214,9 @@ public class MemberController {
 
 
 }
+<<<<<<< HEAD
+=======
+ 
+
+>>>>>>> master
 */
