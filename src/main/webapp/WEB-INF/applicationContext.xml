@@ -3,23 +3,28 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 
-    <context:component-scan base-package="server_api.service"/>
+    <context:component-scan base-package="service"/>
     <bean id="dataSource"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource" p:driverClassName="com.mysql.jdbc.Driver"
-          p:url="jdbc:mysql://localhost/xe" p:username="root" p:password="mysql"/>
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" p:dataSource-ref="dataSource"
-          p:mapperLocations="classpath*:dao/mapper/**/*.xml"/>
-    <bean id="memberDao" class="org.mybatis.spring.mapper.MapperFactoryBean"
-          p:sqlSessionFactory-ref="sqlSessionFactory">
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost/xe"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="mysql"></property>
+    </bean>
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="mapperLocations" value="classpath*:dao/mapper/**/*.xml"></property>
+    </bean>
+    <bean id="memberDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
         <property name="mapperInterface" value="dao.IMemberDao"></property>
     </bean>
 
 </beans>
-
 

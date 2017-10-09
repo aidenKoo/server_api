@@ -1,25 +1,25 @@
 
         package server_api.service;
 
-        import java.util.HashMap;
-        import java.util.List;
-        import java.util.Map;
-
         import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Service;
+import server_api.commons.Constant;
+import server_api.dao.IMemberDao;
 
-        import server_api.commons.Constant;
-        import server_api.dao.IMemberDao;
-        import server_api.commons.Constant;
-        import server_api.dao.IMemberDao;
+import java.util.HashMap;
+import java.util.List;
 
-        @Service
+        @Service("MemberService")
 public class MemberService {
-    @Autowired
     private IMemberDao memberDao;
 
+            @Autowired
+            public MemberService(IMemberDao memberDao) {
+                this.memberDao = memberDao;
+            }
 
-    public String getData(){
+
+            public String getData(){
         return "I am a boy";
     }
     public List<HashMap<String, Object>> selectAll() {
@@ -55,17 +55,10 @@ public class MemberService {
         HashMap<String, Object> result = memberDao.selectOne(id);
         if(result == null)
             return false;
-        else
-        {
+        else {
             String oPwd = (String) result.get(Constant.Member.PWD);
-            if(oPwd==null)
-                return false;
-            else{
-                if(oPwd.equals(pwd))
-                    return true;
-                else
-                    return false;
-            }
+            if (oPwd != null) if (oPwd.equals(pwd)) return true;
+            return false;
 
         }
     }

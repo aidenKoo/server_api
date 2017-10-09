@@ -1,19 +1,16 @@
 
         package server_api.controller;
 
-        import java.util.HashMap;
-        import java.util.Map;
-
-        import javax.servlet.http.HttpSession;
-
         import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.stereotype.Controller;
-        import org.springframework.ui.Model;
-        import org.springframework.web.bind.annotation.RequestMapping;
-        import org.springframework.web.bind.annotation.RequestParam;
-        import org.springframework.web.servlet.ModelAndView;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+import server_api.service.MemberService;
 
-        import server_api.service.MemberService;
+import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 
 //서비스주입받아서
 //받은 리퀘스트를 처리하기에 피룡한 서비스의 메소드를 호출해서 결과 획득 
@@ -21,8 +18,12 @@
 //모델엔뷰 리턴 
 @Controller
 public class MemberController {
+    private final MemberService service;
+
     @Autowired
-    private MemberService service;
+    public MemberController(MemberService service) {
+        this.service = service;
+    }
 
     @RequestMapping("test.do")
     public ModelAndView dummy(){
@@ -43,7 +44,7 @@ public class MemberController {
 //-ModelAndView()
 //데이터에 대한 정보만 있는 경우
 //Model or Map
-//페이지에 대한 정보만 있는 경우 
+//페이지에 대한 정보만 있는 경우
 //String 
 //둘다 없는 ㅕㅇ우
 //void 
@@ -70,9 +71,9 @@ public class MemberController {
 //    public String join(String id, String pwd, String pwd_Check, String name, String email, String phone, String admin){
 //        
     //System.out.println("id");
-    //파라미터가 잘 들어오는지 확인! ㅋㅋ
+    //파라미터가 잘 들어오는지 확인!
     //파라미터 이름이 똑같아야함 uid로 하면 없으니까 null값이 뜸
-    //@RequestParam("id") String uid id라는 파라미터의 값을 uid매개변수에 넣어주셈!
+    //@RequestParam("id") String uid id라는 파라미터의 값을 uid매개변수에 넣어주
     //required, value, defaultValue의 속성값이 있는데
     //required값이 true일 경우 해당 파라미터가 없으면 요청처리 못함
     //defaultValue는 해당 파라미터 값이 들어오지 않았을 경우
