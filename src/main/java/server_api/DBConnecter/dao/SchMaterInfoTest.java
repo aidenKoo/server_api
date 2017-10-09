@@ -13,7 +13,7 @@ public class SchMaterInfoTest {
     public static void main(String[] args){
         SchMaterInfoTest s = new SchMaterInfoTest();
         SchMasterInfo requestedSchMasterInfo = new SchMasterInfo();
-        requestedSchMasterInfo.setSch_name("1");
+        requestedSchMasterInfo.setSch_seq(1);
         System.out.println(requestedSchMasterInfo.getSch_seq());
 
         s.mybatis(requestedSchMasterInfo);

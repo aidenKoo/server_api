@@ -34,9 +34,9 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.4" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.5.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.5.4" />
-          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.0-M4" />
-          <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.0.0-M2" />
-          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.0.0-M4" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.1" />
+          <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.0.0" />
+          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.0.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.9.RELEASE" />
           <element id="library" level="project" name="Maven: sslext:sslext:1.2-0" />
           <element id="library" level="project" name="Maven: struts:struts:1.2.7" />
